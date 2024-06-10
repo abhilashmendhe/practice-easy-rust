@@ -1,0 +1,8 @@
+[package]
+name = "_127_impl_trait_to_return_closure_from_funcs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

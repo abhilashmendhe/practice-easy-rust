@@ -1,0 +1,19 @@
+// 77. iters
+/*
+    .next() -> gives you next element.
+*/
+fn main() {
+    fn main() {
+        let my_vec = vec!['a', 'b', '거', '柳']; // Just a regular Vec
+    
+        let mut my_vec_iter = my_vec.iter(); // This is an Iterator type now, but we haven't called it yet
+    
+        assert_eq!(my_vec_iter.next(), Some(&'a'));  // Call the first item with .next()
+        assert_eq!(my_vec_iter.next(), Some(&'b'));  // Call the next
+        assert_eq!(my_vec_iter.next(), Some(&'거')); // Again
+        assert_eq!(my_vec_iter.next(), Some(&'柳')); // Again
+        assert_eq!(my_vec_iter.next(), None);        // Nothing is left: just None
+        assert_eq!(my_vec_iter.next(), None);        // You can keep calling .next() but it will always be None
+    }
+    
+}

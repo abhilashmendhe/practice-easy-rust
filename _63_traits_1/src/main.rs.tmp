@@ -1,0 +1,28 @@
+// 63. Intro to traits.
+/*
+One type can have multiple types.
+*/
+
+use std::ops::Add;
+
+struct ThingsToAdd {
+    first_thing: i32,
+    second_thing: i32,
+}
+
+impl Add for ThingsToAdd {
+    type Output = ThingsToAdd;
+    fn add(self, rhs: Self) -> Self::Output {
+        ThingsToAdd {
+            first_thing: self.first_thing + rhs.first_thing,
+            second_thing: self.second_thing + rhs.second_thing
+        }
+    }
+}
+fn main() {
+    let myt1 = ThingsToAdd {
+        first_thing: 1,
+        second_thing: 1
+    };
+
+}
